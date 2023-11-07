@@ -63,8 +63,6 @@ so you can define it as the following:
 
 ## <a name="atomicity"></a> Atomicity
 
-<img src="https://i.postimg.cc/dDhWhZkn/Atomicity.jpg" alt="Atomicity" style="width:30px;height:30px;">
-
 > **Important**
 > Atomicity: it means that all queries in a transaction are either completed in its entirety or not at all.
 >
@@ -80,8 +78,6 @@ so you can define it as the following:
 <hr>
 
 ## <a name="consistency"></a> Consistency
-
-<img src="https://i.postimg.cc/LhGxL4jS/Consistency.jpg" alt="Consistency" style="width:30px;height:30px;">
 
 > **Important**
 > Consistency: express the database is in a valid state before and after the transaction.
@@ -101,8 +97,6 @@ We have two types of consistency:
 <hr>
 
 ## <a name="isolation"></a> Isolation
-
-<img src="https://i.postimg.cc/t1DrxhNv/Isolation.jpg" alt="Isolation" style="width:30px;height:30px;">
 
 > **Important**
 > Isolation: The ability of multiple transactions to execute concurrently without interfering with each other.
@@ -213,8 +207,6 @@ So to solve these problems we have a term called:
 <hr>
 
 ## <a name="durability"></a> Durability
-
-<img src="https://i.postimg.cc/H883RFDF/Durability.jpg" alt="Durability" style="width:50px;height:50px;">
 
 > **Important**
 > Durability: means that all changes made by a committed transaction are persisted in a durable non-volatile storage, even if the system crashes.
