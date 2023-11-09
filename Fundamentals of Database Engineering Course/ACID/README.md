@@ -94,6 +94,15 @@ We have two types of consistency:
   - You see the same data at the same time.
   - In case of concurrent transactions you may face some of the [Read Phenomena](#read-phenomena).
 
+> **Note**
+> In big projects, when you need to increase the availability of the system, this may break the consistency property.
+> So, in some use cases, you can sacrifice the strict consistency for availability and use another term called [**Eventual Consistency**](https://en.wikipedia.org/wiki/Eventual_consistency).
+> This approach is popular in **NoSQL** and **Distributed Systems** worlds, when you need to scale your system.
+> Ex: When you scroll on facebook and see a post with 100k reactions, that doesn't mean that this is the actual number, but the system ensure that at some point it will be consistent.
+> For more information:
+> - [Baeldung](https://www.baeldung.com/cs/eventual-consistency-vs-strong-eventual-consistency-vs-strong-consistency)
+> - [CAP Theorem - IBM](https://www.ibm.com/topics/cap-theorem)
+
 <hr>
 
 ## <a name="isolation"></a> Isolation
