@@ -1,8 +1,11 @@
+> [!NOTE]
+> The information in this section is primarily sourced from [Fundamentals of DB Engineering](https://www.udemy.com/course/database-engines-crash-course/) course, along with insights gathered from various websites & blogs during my study.
+
 # In this Section we will talk about ACID
 
 ## What is ACID?
 
-> **Important**
+> [!IMPORTANT]
 > ACID: an acronym that stands for four properties that ensure the reliability and consistency of database transactions.
 
 1. **[Atomicity](#atomicity)**
@@ -14,7 +17,7 @@ Before we talk about these properties we should talk about something called:
 
 ## Transactions
 
-> **Important**
+> [!IMPORTANT]
 > Transaction: refers to a sequence of one or more database operations that are treated as a single, indivisible unit of work.
 
 so you can define it as the following:
@@ -23,7 +26,7 @@ so you can define it as the following:
 - One unit of work
 - Ex: Withdraw some money from account :arrow_right: require multiple queries to perform the operation (SELECT, UPDATE, UPDATE.... etc)
 
-> **Note**
+> [!TIP]
 > Understanding how DBMS work internally will help you to choose the suitable one for your needs, as you will see different DBMSs offer different trade-offs.
 > For example: When applying a transaction to update some data you will find different DBMSs follow different strategies.
 >
@@ -55,7 +58,7 @@ so you can define it as the following:
 - **COMMIT**
 - **ROLLBACK**
 
-> **Note**
+> [!NOTE]
 > Transaction is usually used to modify some data, but there are some scenarios that you may need a read-only transaction.
 > Ex: generate a report about some patients in a hospital.
 
@@ -63,7 +66,7 @@ so you can define it as the following:
 
 ## <a name="atomicity"></a> Atomicity
 
-> **Important**
+> [!IMPORTANT]
 > Atomicity: it means that all queries in a transaction are either completed in its entirety or not at all.
 >
 > - All transaction queries must succeed.
@@ -79,7 +82,7 @@ so you can define it as the following:
 
 ## <a name="consistency"></a> Consistency
 
-> **Important**
+> [!IMPORTANT]
 > Consistency: express the database is in a valid state before and after the transaction.
 > When we Update the database we move from a valid state to another valid state.
 > Stability is maintained whether the transaction succeeds or fails
@@ -94,7 +97,7 @@ We have two types of consistency:
   - You see the same data at the same time.
   - In case of concurrent transactions you may face some of the [Read Phenomena](#read-phenomena).
 
-> **Note**
+> [!NOTE]
 > In big projects, when you need to increase the availability of the system, this may break the consistency property.
 > So, in some use cases, you can sacrifice the strict consistency for availability and use another term called [**Eventual Consistency**](https://en.wikipedia.org/wiki/Eventual_consistency).
 > This approach is popular in **NoSQL** and **Distributed Systems** worlds, when you need to scale your system.
@@ -107,7 +110,7 @@ We have two types of consistency:
 
 ## <a name="isolation"></a> Isolation
 
-> **Important**
+> [!IMPORTANT]
 > Isolation: The ability of multiple transactions to execute concurrently without interfering with each other.
 
 - When there are multiple TCP connections to the database, mostly concurrency will happen.
@@ -117,7 +120,7 @@ So due to this, we could see some troubles, and let's call it:
 
 ## <a name="read-phenomena"></a> Read Phenomena
 
-> **Important**
+> [!IMPORTANT]
 > Read Phenomena: A set of problems that can occur when multiple transactions are reading data from a database concurrently.
 
 ### Main Read Phenomena:
@@ -146,14 +149,14 @@ So due to this, we could see some troubles, and let's call it:
 
 <br>
 
-> **Note**
+> [!NOTE]
 > the main difference between **Dirty Read** and **Non-Repeatable Read** is that in **Dirty Read** the transaction didn't commit the changes yet, so it may be rollbacked, but in **Non-Repeatable Read** you read the data twice, one before the transaction and one after another transaction been committed.
 
 So to solve these problems we have a term called:
 
 ### Isolation Levels
 
-> **Important**
+> [!IMPORTANT]
 > A property that determines how transaction integrity is visible to other users and systems
 
 - **Read Uncommitted**
@@ -217,7 +220,7 @@ So to solve these problems we have a term called:
 
 ## <a name="durability"></a> Durability
 
-> **Important**
+> [!IMPORTANT]
 > Durability: means that all changes made by a committed transaction are persisted in a durable non-volatile storage, even if the system crashes.
 
 Durability techniques:
@@ -226,7 +229,7 @@ Durability techniques:
 - Asynchronous Snapshots
 - Append-Only File - AOF
 
-> **Note**
+> [!NOTE]
 > The OS is using a technique called **File System Cache** to reduce the disk I/O operations, but the database tells us "I guarantee you that the data is written to the disk", so what if the system crashes before writing the cached data to the disk?
 > The answer is `fsync` system call, which is used to bypass the caching level and write ahead to the disk. **slow but durable** 😁
 
