@@ -3,29 +3,6 @@
 
 # In this Section we will talk about ACID
 
-## What is ACID?
-
-> [!IMPORTANT]
-> ACID: an acronym that stands for four properties that ensure the reliability and consistency of database transactions.
-
-1. **[Atomicity](#atomicity)**
-2. **[Consistency](#consistency)**
-3. **[Isolation](#isolation)**
-4. **[Durability](#durability)**
-
-Before we talk about these properties we should talk about something called:
-
-## Transactions
-
-> [!IMPORTANT]
-> Transaction: refers to a sequence of one or more database operations that are treated as a single, indivisible unit of work.
-
-so you can define it as the following:
-
-- A collection of queries
-- One unit of work
-- Ex: Withdraw some money from account :arrow_right: require multiple queries to perform the operation (SELECT, UPDATE, UPDATE.... etc)
-
 > [!TIP]
 > Understanding how DBMS work internally will help you to choose the suitable one for your needs, as you will see different DBMSs offer different trade-offs.
 > For example: When applying a transaction to update some data you will find different DBMSs follow different strategies.
@@ -51,6 +28,29 @@ so you can define it as the following:
 >   </ul>
 >
 > Considering these differences in advance can be a lifesaver. If your application logic isn't compatible with the current DBMS, switching to a different one during operation can be costly.
+
+## What is ACID?
+
+> [!IMPORTANT]
+> ACID: an acronym that stands for four properties that ensure the reliability and consistency of database transactions.
+
+1. **[Atomicity](#atomicity)**
+2. **[Consistency](#consistency)**
+3. **[Isolation](#isolation)**
+4. **[Durability](#durability)**
+
+Before we talk about these properties we should talk about something called:
+
+## Transactions
+
+> [!IMPORTANT]
+> Transaction: refers to a sequence of one or more database operations that are treated as a single, indivisible unit of work.
+
+so you can define it as the following:
+
+- A collection of queries
+- One unit of work
+- Ex: Withdraw some money from account :arrow_right: require multiple queries to perform the operation (SELECT, UPDATE, UPDATE.... etc)
 
 ### Transaction lifespan
 
