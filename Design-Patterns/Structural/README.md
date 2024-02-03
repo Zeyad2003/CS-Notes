@@ -157,4 +157,4 @@
 - [Composite Pattern](https://refactoring.guru/design-patterns/composite)
 - [Flyweight Pattern](https://refactoring.guru/design-patterns/flyweight)
 
-**There's [Part 3](../../Week5/Design-Pattern3) we talk about Behavioural Patterns.**
+**There's [Part 3](../Behavioural/README.md) we talk about Behavioural Patterns.**

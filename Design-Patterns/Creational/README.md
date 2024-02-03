@@ -358,4 +358,4 @@ public class Main {
 - [Prototype Pattern](https://refactoring.guru/design-patterns/prototype)
 
 
-**Refer to the resources for [Part 2](../../Week4/Design-Pattern2), we delve into Structural Patterns.**
+**Refer to the resources for [Part 2](../Structural/README.md), we delve into Structural Patterns.**
