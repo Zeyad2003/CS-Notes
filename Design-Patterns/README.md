@@ -1,6 +1,35 @@
 # Design Patterns
 
-In this section, I'll add some notes & explanations about the design patterns in software engineering:
+In this section, I'll add some notes & explanations about the design patterns in software engineering.
+
+First let's discuss **What is a Design Pattern?**
+> [!Important]
+> _In software engineering, a software design pattern is a general reusable solution to a commonly occurring problem
+within a given context in software design. It is not a finished design that can be transformed directly into source or
+machine code. It is a description or template for how to solve a problem that can be used in many different situations._
+
+- Efficient, reusable, and maintainable solutions to common software problems.
+- It's like a blueprint for solving a certain type of problems, but it's not a specific set of instructions you can just
+  copy.
+
+> [!NOTE]
+> **Pattern** has some similarities with **Algorithm**, but you can imagine it as a higher level of abstraction.
+
+**There are 3 types of Design Patterns:**
+
+1. **Creational Patterns:**
+    - Related to object creation.
+    - Provide object creation mechanisms that increase flexibility and reuse of existing code.
+
+2. **Structural Patterns:**
+    - Related to object composition and relationships between classes.
+    - They help to answer How to build a software component to be efficient and flexible.
+
+3. **Behavioral Patterns:**
+    - Related to communication between objects.
+    - Take care of effective communication and the assignment of responsibilities between objects.
+
+## Here's some notes about each type:
 
 1. [Creational Patterns](Creational/README.md)
 
